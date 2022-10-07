@@ -58,23 +58,20 @@
       <form method="POST" action="proses_tambah.php" enctype="multipart/form-data" >
       <section class="base">
         <div>
-          <label>Nama Buku</label>
+          <label>Judul Buku</label>
           <input type="text" name="nama" autofocus="" required="" />
         </div>
         <div>
-          <label>Author Buku</label>
+          <label>Penulis Buku</label>
          <input type="text" name="author" />
         </div>
         <div>
-          <label>Jumlah Halaman</label>
+          <label>Tahun Terbit</label>
          <input type="text" name="jumlah_halaman" required="" />
         </div>
+        
         <div>
-          <label>Harga</label>
-         <input type="text" name="harga" required="" />
-        </div>
-        <div>
-          <label>Gambar Produk</label>
+          <label>Gambar</label>
          <input type="file" name="gambar" required="" />
         </div>
         <div>
