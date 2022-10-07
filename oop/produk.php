@@ -49,9 +49,9 @@ $produk3->harga = 30000;
 // echo "<hr>";
 
 $produk4 = new Produk();
-$produk4->judul = "Uncharted";
-$produk4->penulis = "Neil Druckmann";
-$produk4->penerbit = "Sony Computer";
+$produk4->judul = "Dillan";
+$produk4->penulis = "Piddi baiq";
+$produk4->penerbit = "mediacetak";
 $produk4->harga = 250000;
 
 echo "Komik : " . $produk3->getLabel();
