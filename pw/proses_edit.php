@@ -7,7 +7,7 @@ include 'koneksi.php';
   $judul_buku  = $_POST['judul_buku'];
   $penulis     = $_POST['penulis'];
   $tahun_terbit    = $_POST['tahun_terbit'];
-  $gambar = $_FILES['gambar']['buku'];
+  $gambar = $_FILES['gambar']['judul_buku'];
   //cek dulu jika merubah gambar produk jalankan coding ini
   if($gambar != "") {
     $ekstensi_diperbolehkan = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -51,6 +51,6 @@ include 'koneksi.php';
           echo "<script>alert('Data berhasil diubah.');window.location='index.php';</script>";
       }
     }
-
+?>
  
 
