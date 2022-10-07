@@ -13,7 +13,7 @@
       }
       h1 {
         text-transform: uppercase;
-        color: salmon;
+        color: blue;
       }
     table {
       border: solid 1px #DDEEEE;
@@ -38,7 +38,7 @@
         /*text-shadow: 1px 1px 1px #fff;*/
     }
     a {
-          background-color: salmon;
+          background-color: blue;
           color: #fff;
           padding: 10px;
           text-decoration: none;
