@@ -1,3 +1,8 @@
+<?php
+// Nama : Nina Rosita
+// NRP : 203040082
+?>
+
 <?php 
 
 class Produk {
