@@ -67,7 +67,7 @@
         </div>
         <div>
           <label>Tahun Terbit</label>
-         <input type="text" name="jumlah_halaman" required="" />
+         <input type="text" name="tahun_terbit" required="" />
         </div>
         
         <div>
