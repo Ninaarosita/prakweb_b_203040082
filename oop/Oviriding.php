@@ -48,7 +48,7 @@ class Komik extends Produk {
 }
 
 
-class Game extends Produk {
+class buku extends Produk {
     public $waktuMain;
 
     public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $waktuMain = 0 ) {
@@ -73,7 +73,7 @@ class CetakInfoProduk {
 
 
 $produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100);
-$produk2 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 250000, 50);
+$produk2 = new buku("Dillan", "Piddi baiq", "MediaCetak", 250000, 50);
 
 echo $produk1->getInfoProduk();
 echo "<br>";
