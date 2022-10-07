@@ -40,7 +40,7 @@ class Produk
 
     if ($this->tipe == "Komik") {
       $str .= " - {$this->jmlHalaman} Halaman.";
-    } else if ($this->tipe == "Game") {
+    } else if ($this->tipe == "buku") {
       $str .= " - {$this->waktuMain} Jam.";
     }
 
@@ -59,10 +59,10 @@ class CetakInfoProduk
 }
 
 $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0, "Komik");
-$produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000, 0, 50, "Game");
+$produk2 = new Produk("Dillan", "Neil Druckmann", "Sony Computer", 250000, 0, 50, "buku");
 
 // Komik : Naruto | Masashi Kishimoto, Shonen Jump, (Rp. 30000) - 100 Halaman.
-// Game : Uncharted | Neil Druckmann, Sony Computer, (Rp. 250000) - 50 Jam.
+// Game : Dillan | Neil Druckmann, Sony Computer, (Rp. 250000) - 50 Jam.
 
 echo $produk1->getInfoLengkap();
 echo "<br>";

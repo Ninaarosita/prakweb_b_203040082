@@ -64,7 +64,7 @@
     <tbody>
       <?php
       // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-      $query = "SELECT * FROM buku ORDER BY id_buku ASC";
+      $query = "SELECT * FROM buku ORDER BY id ASC";
       $result = mysqli_query($koneksi, $query);
       //mengecek apakah ada error ketika menjalankan query
       if(!$result){
@@ -78,21 +78,21 @@
       // kemudian dicetak dengan perulangan while
       while($row = mysqli_fetch_assoc($result))
       {
-      ?>
-       <tr>
-          <td><?php echo $no; ?></td>
-          <td><?php echo $row['judul_buku']; ?></td>
-           <td><?php echo $row['penulis']; ?></td>
-           <td><?php echo $row['tahun_terbit']; ?></td>
-           <td style="text-align: center;"><img src="gambar/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
-          <td>
-              <a class='btn btn-primary btn-sm' href="edit_produk.php?id=<?php echo $row['id_buku']; ?>">Update Data</a> |
-              <a class='btn btn-danger btn-sm' href="proses_hapus.php?id=<?php echo $row['id_buku']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus Data</a> |
-          </td>
-      </tr>
-         
-      <?php
-        $no++; //untuk nomor urut terus bertambah 1
+        ?>
+        <tr>
+            <td><?php echo $no; ?></td>
+            <td><?php echo $row['judul_buku']; ?></td>
+            <td><?php echo $row['penulis']; ?></td>
+            <td><?php echo $row['tahun_terbit']; ?></td>
+            <td style="text-align: center;"><img src="gambar/<?php echo $row['gambar']; ?>" style="width: 120px;"></td>
+            <td>
+                <a class='btn btn-primary btn-sm' href="edit_produk.php?id=<?php echo $row['id']; ?>">Update Data</a> |
+                <a class='btn btn-danger btn-sm' href="proses_hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus Data</a> |
+            </td>
+        </tr>
+          
+        <?php
+          $no++; //untuk nomor urut terus bertambah 1
       }
       ?>
     </tbody>

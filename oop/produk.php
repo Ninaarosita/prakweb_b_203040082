@@ -7,7 +7,7 @@
 
 // Jualan Produk
 // Komik
-// Game
+// buku
 class Produk
 {
   public $judul = "judul",
@@ -56,4 +56,4 @@ $produk4->harga = 250000;
 
 echo "Komik : " . $produk3->getLabel();
 echo "<br>";
-echo "Game : "  . $produk4->getLabel();
+echo "buku : "  . $produk4->getLabel();

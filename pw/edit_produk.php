@@ -5,10 +5,10 @@ include 'koneksi.php';
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {
     // ambil nilai id dari url dan disimpan dalam variabel $id
-    $id = ($_GET["id"]);
+    $id_buku = ($_GET["id"]);
 
     // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM buku WHERE id_buku='$id'";
+    $query = "SELECT * FROM buku WHERE id='$id_buku'";
     $result = mysqli_query($koneksi, $query);
     // jika data gagal diambil maka akan tampil error berikut
     if(!$result){
@@ -82,7 +82,7 @@ include 'koneksi.php';
       <form method="POST" action="proses_edit.php" enctype="multipart/form-data" >
       <section class="base">
         <!-- menampung nilai id produk yang akan di edit -->
-        <input name="no" value="<?php echo $data['id_buku']; ?>"  hidden />
+        <input name="no" value="<?php echo $data['id']; ?>"  hidden />
         <div>
           <label>Nama Buku</label>
           <input type="text" name="nama" value="<?php echo $data['judul_buku']; ?>" autofocus="" required="" />

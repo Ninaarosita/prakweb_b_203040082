@@ -3,11 +3,11 @@
 include 'koneksi.php';
 
 	// membuat variabel untuk menampung data dari form
-  $id_buku = $_POST['id_buku'];
+  $id_buku = $_POST['id'];
   $judul_buku  = $_POST['judul_buku'];
   $penulis     = $_POST['penulis'];
   $tahun_terbit    = $_POST['tahun_terbit'];
-  $gambar = $_FILES['gambar']['bukue'];
+  $gambar = $_FILES['gambar']['buku'];
   //cek dulu jika merubah gambar produk jalankan coding ini
   if($gambar != "") {
     $ekstensi_diperbolehkan = array('png','jpg'); //ekstensi file gambar yang bisa diupload 
@@ -21,7 +21,7 @@ include 'koneksi.php';
                       
                     // jalankan query UPDATE berdasarkan ID yang produknya kita edit
                    $query  = "UPDATE buku SET judul_buku = '$judul_buku', penulis = '$penulis', tahun_terbit = '$tahun_terbit', gambar = '$nama_gambar_baru'";
-                    $query .= "WHERE id_buku = '$id_buku'";
+                    $query .= "WHERE id = '$id_buku'";
                     $result = mysqli_query($koneksi, $query);
                     // periska query apakah ada error
                     if(!$result){
@@ -39,7 +39,7 @@ include 'koneksi.php';
     } else {
       // jalankan query UPDATE berdasarkan ID yang produknya kita edit
       $query  = "UPDATE buku SET judul_buku = '$judul_buku', penulis = '$penulis', tahun_terbit = '$tahun_terbit'";
-      $query .= "WHERE id_buku = '$id_buku'";
+      $query .= "WHERE id = '$id_buku'";
       $result = mysqli_query($koneksi, $query);
       // periska query apakah ada error
       if(!$result){

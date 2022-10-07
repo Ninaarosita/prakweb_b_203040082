@@ -37,7 +37,7 @@ if($gambar != "") {
                 echo "<script>alert('Ekstensi gambar yang boleh hanya jpg atau png.');window.location='tambah_produk.php';</script>";
             }
 } else {
-   $query = "INSERT INTO buku (judul_buku, penulis, tahun_terbit, gambar) VALUES ('$nama', '$author', '$jumlah_halaman', null)";
+   $query = "INSERT INTO buku (judul_buku, penulis, tahun_terbit, gambar) VALUES ('$nama', '$author', '$tahun_terbit', null)";
                   $result = mysqli_query($koneksi, $query);
                   // periska query apakah ada error
                   if(!$result){
@@ -49,6 +49,6 @@ if($gambar != "") {
                     echo "<script>alert('Data berhasil ditambah.');window.location='index.php';</script>";
                   }
 }
-
+?>
  
 
